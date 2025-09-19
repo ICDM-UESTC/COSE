@@ -11,7 +11,7 @@ from sgmse.util.tensors import batch_broadcast
 import torch
 
 from sgmse.util.registry import Registry
-
+"Actually, we don't use any implementation for COSE from this file, but we keep it for possible future use."
 
 SDERegistry = Registry("SDE")
 

@@ -20,7 +20,6 @@ from sgmse.util.other import pad_spec
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--test_dir", type=str, required=True, help='Directory containing the test data (noisy)')
-    parser.add_argument("--clean_dir", type=str, required=True, help='Directory containing the clean data')
     parser.add_argument("--enhanced_dir", type=str, required=True, help='Directory containing the enhanced data')
     parser.add_argument("--ckpt", type=str,  help='Path to model checkpoint')
     parser.add_argument("--N", type=int, default=1, help="Number of reverse steps")
@@ -51,16 +50,16 @@ if __name__ == '__main__':
     # Enhance files
     for noisy_file in tqdm(noisy_files):
         filename = basename(noisy_file)
-        clean_file = join(args.clean_dir, filename)
+
         
         # Load noisy and clean wavs
         y, sr = load(noisy_file)  # Noisy
-        x, _ = load(clean_file)   # Clean
+
         
         # Resample to target sample rate if needed
         if sr != target_sr:
             y = torch.tensor(resample(y.numpy(), orig_sr=sr, target_sr=target_sr))
-            x = resample(x.numpy(), orig_sr=sr, target_sr=target_sr).squeeze()
+
         
         # Convert clean speech to numpy array
         # Reverse sampling with clean speech as first argument

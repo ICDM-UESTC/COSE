@@ -129,7 +129,7 @@ class ScoreModel(pl.LightningModule):
     def eval(self, no_ema=False):
         return self.train(False, no_ema=no_ema)
 
-    def _loss(self, forward_out, x_t, z, t, mean, x):
+    def _loss(self, forward_out, x_t):
         """
         Different loss functions can be used to train the score model, see the paper: 
         
@@ -176,7 +176,6 @@ class ScoreModel(pl.LightningModule):
             lambda_param = torch.rand(b, device=x.device)
             s = (1 - lambda_param) * t + lambda_param * r
             texp = t.view([b, *([1] * len(x.shape[1:]))])
-            rexp = r.view([b, *([1] * len(x.shape[1:]))])
             x_T = torch.randn_like(x)  
             x_t = (1 - texp) * x + texp * x_T
             v = x_T - x
@@ -185,9 +184,9 @@ class ScoreModel(pl.LightningModule):
             u1 = self.dnn(x_s, s, r, y=y)
             u_tr = self.dnn(x_t, t, r, y=y)
             target_u = ((1 - lambda_param).view(-1, 1, 1, 1) * u1 + lambda_param.view(-1, 1, 1, 1) * u2).detach()
-            loss_ISC = self._loss(forward_out = u_tr, x_t = target_u, z = None, t = t, mean = None, x = None)
+            loss_COSE = self._loss(forward_out = u_tr, x_t = target_u)
 
-            return loss_ISC 
+            return loss_COSE
         else:
             x, y = batch
             b = x.size(0)
@@ -199,7 +198,7 @@ class ScoreModel(pl.LightningModule):
             x_t = (1 - texp) * x + texp * x_T
             v = x_T - x
             forward_out = self.dnn(x_t, t, t, y)  
-            loss = self._loss(forward_out = forward_out, x_t = v, z = None, t = t, mean = None, x = None)  # 计算损失
+            loss = self._loss(forward_out = forward_out, x_t = v)  # 计算损失
             return loss
 
     def training_step(self, batch, batch_idx):
