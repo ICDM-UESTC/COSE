@@ -26,6 +26,8 @@ python enhancement.py \
     --ckpt <path_to_model_checkpoint>
 ```
 ## How to Compute Evaluation Metrics
+
+To calculate metrics, run:
 ```
 python calc_metrics.py \
     --clean_dir <path_to_clean> \
