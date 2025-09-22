@@ -103,7 +103,7 @@ class Specs(Dataset):
 class SpecsDataModule(pl.LightningDataModule):
     @staticmethod
     def add_argparse_args(parser):
-        parser.add_argument("--base_dir", type=str, default="/home/icdm/yg/sgmse+flow2/mydataset/voicebank", required=False, help="The base directory of the dataset. Should contain `train`, `valid` and `test` subdirectories, each of which contain `clean` and `noisy` subdirectories.")
+        parser.add_argument("--base_dir", type=str, required=False, help="The base directory of the dataset. Should contain `train`, `valid` and `test` subdirectories, each of which contain `clean` and `noisy` subdirectories.")
         parser.add_argument("--format", type=str, choices=("default", "reverb"), default="default", help="Read file paths according to file naming format.")
         parser.add_argument("--batch_size", type=int, default=1, help="The batch size. 8 by default.")
         parser.add_argument("--n_fft", type=int, default=510, help="Number of FFT bins. 510 by default.")   # to assure 256 freq bins
