@@ -27,6 +27,11 @@ python enhancement.py --test_dir <path_to_noisy> --enhanced_dir <path_to_enhance
 
 python calc_metrics.py --clean_dir <path_to_clean> --noisy_dir <path_to_noisy> --enhanced_dir <path_to_enhanced>
 ```
+## Pretrained Checkpoints (Coming Soon)
+
+We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
+> **Stay tuned!** We will update this section as soon as the checkpoint is ready for public release.
+
 ## Built Upon & Related Work
 
 This repository  is built on previous outstanding works:
@@ -38,11 +43,6 @@ This repository  is built on previous outstanding works:
 - 🔗 **[FlowMSE]**-https://github.com/seongq/flowmse
 
 **Note**: This work extends the above method through a one-step generation framework while retaining the complex STFT-based front-end data processing design.
-
-## Pretrained Checkpoints (Coming Soon)
-
-We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
-> **Stay tuned!** We will update this section as soon as the checkpoint is ready for public release.
 
 ## Citations / References
 
