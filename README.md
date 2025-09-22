@@ -19,22 +19,19 @@ python train.py --log_dir <path_to_model> --base_dir <path_to_dataset>
 ## How to Run Inference
 
 To enhance noisy speech using a trained checkpoint, run:
-
-```bash
+```
 python enhancement.py \
     --test_dir <path_to_noisy> \
     --enhanced_dir <path_to_enhanced> \
     --ckpt <path_to_model_checkpoint>
-
+```
 ## How to Compute Evaluation Metrics
-
-
-```bash
+```
 python calc_metrics.py \
     --clean_dir <path_to_clean> \
     --noisy_dir <path_to_noisy> \
     --enhanced_dir <path_to_enhanced>
-
+```
 
 
 ## Pretrained Checkpoints (Coming Soon)
