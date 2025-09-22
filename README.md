@@ -16,12 +16,27 @@ pip install -r requirements.txt
 ```
 python train.py --log_dir <path_to_model> --base_dir <path_to_dataset>
 ```
-## How to evaluate
-```
-python enhancement.py --test_dir <path_to_noisy> --enhanced_dir <path_to_enhanced> --ckpt <path_to_model_checkpoint>
+## How to Run Inference
 
-python calc_metrics.py --clean_dir <path_to_clean> --noisy_dir <path_to_noisy> --enhanced_dir <path_to_enhanced>
-```
+To enhance noisy speech using a trained checkpoint, run:
+
+```bash
+python enhancement.py \
+    --test_dir <path_to_noisy> \
+    --enhanced_dir <path_to_enhanced> \
+    --ckpt <path_to_model_checkpoint>
+
+## How to Compute Evaluation Metrics
+
+
+```bash
+python calc_metrics.py \
+    --clean_dir <path_to_clean> \
+    --noisy_dir <path_to_noisy> \
+    --enhanced_dir <path_to_enhanced>
+
+
+
 ## Pretrained Checkpoints (Coming Soon)
 
 We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
