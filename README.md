@@ -1,8 +1,6 @@
 # Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement
-This is the implementation of Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement.
+This is the implementation of [Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement](https://arxiv.org/abs/2509.15952).
 
-You can access the full paper on arXiv via the link below:
-[Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement](https://arxiv.org/abs/2509.15952)
 ## Environment Requirements
 ```
 # create virtual environment
