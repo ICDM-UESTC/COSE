@@ -31,4 +31,4 @@ This repository  is built on previous outstanding works:
 
 - 🔗 **[FlowMSE]**-https://github.com/seongq/flowmse
 
-> **Note**: This work extends the above method through a one-step generation framework while retaining the complex STFT-based front-end data processing design.
+**Note**: This work extends the above method through a one-step generation framework while retaining the complex STFT-based front-end data processing design.
