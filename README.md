@@ -4,6 +4,7 @@ This is the implementation of Compose Yourself: Average-Velocity Flow Matching f
 # Paper Link
 
 You can access the full paper on arXiv via the link below:
+
 [View on arXiv](https://arxiv.org/abs/2509.15952)
 ## Environment Requirements
 ```
