@@ -36,4 +36,4 @@ This repository  is built on previous outstanding works:
 ## Pretrained Checkpoints (Coming Soon)
 
 We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
-> **Stay tuned!** We will update this section as soon as the models are ready for public release.
+> **Stay tuned!** We will update this section as soon as the checkpoint is ready for public release.
