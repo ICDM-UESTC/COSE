@@ -81,7 +81,7 @@ class ScoreModel(pl.LightningModule):
         self.num_eval_files = num_eval_files
         self.sr = sr
         self.p = 0.5
-        self.c
+        self.c = 1e-3
         #self.jvp_fn = torch.autograd.functional.jvp
         self.jvp_fn = torch.func.jvp
         # Initialize PESQ loss if pesq_weight > 0.0
