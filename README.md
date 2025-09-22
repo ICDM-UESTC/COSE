@@ -43,3 +43,18 @@ This repository  is built on previous outstanding works:
 
 We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
 > **Stay tuned!** We will update this section as soon as the checkpoint is ready for public release.
+
+#### Citations / References
+
+If you use this repository or reference our work in your research, please cite us using the following BibTeX entry:
+
+```bibtex
+@misc{yang2025composeyourselfaveragevelocityflow,
+      title={Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement}, 
+      author={Gang Yang and Yue Lei and Wenxin Tai and Jin Wu and Jia Chen and Ting Zhong and Fan Zhou},
+      year={2025},
+      eprint={2509.15952},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2509.15952}, 
+}
