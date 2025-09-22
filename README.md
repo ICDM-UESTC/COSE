@@ -1,7 +1,7 @@
 # Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement
 This is the implementation of Compose Yourself: Average-Velocity Flow Matching for One-Step Speech Enhancement.
 
-# Paper Link
+## Paper Link
 
 You can access the full paper on arXiv via the link below:
 
@@ -44,7 +44,7 @@ This repository  is built on previous outstanding works:
 We will provide pretrained checkpoints trained on the **VoiceBank-DEMAND** dataset in the near future.
 > **Stay tuned!** We will update this section as soon as the checkpoint is ready for public release.
 
-#### Citations / References
+## Citations / References
 
 If you use this repository or reference our work in your research, please cite us using the following BibTeX entry:
 
