@@ -25,10 +25,10 @@ python calc_metrics.py --clean_dir <path_to_clean> --noisy_dir <path_to_noisy> -
 
 This repository builds upon previous great works:
 
-- 🔗 **[SGMSE](https://github.com/sp-uhh/sgmse)**
+- 🔗 **[SGMSE]**-https://github.com/sp-uhh/sgmse
 
-- 🔗 **[StoRM](https://github.com/sp-uhh/storm)** 
+- 🔗 **[StoRM]**-(https://github.com/sp-uhh/storm)
 
-- 🔗 **[FlowMSE](https://github.com/seongq/flowmse)** 
+- 🔗 **[FlowMSE]**-(https://github.com/seongq/flowmse)
 
 > **Note**: This work extends the above method through a one-step generation framework while retaining the complex STFT-based front-end data processing design.
